@@ -1,0 +1,34 @@
+package org.redhat.services.rules
+
+import org.kie.api.runtime.KieRuntime
+import org.redhat.services.model.RuleResponse
+
+global java.lang.String reference;
+
+// insert each item in the shopping cart into the Working Memory
+rule "HelloWorld"
+    agenda-group "hello"
+    dialect "java"
+    when
+    then
+        System.out.println("Hello World Rule Fired");
+        RuleResponse r = new RuleResponse();
+        r.setPayload( "Hello World" );
+        r.setRulesFired( r.getRulesFired()+1 );
+        r.setExecutionReference( reference );
+        insert( r );
+end
+
+rule "GoodByeWorld"
+    agenda-group "goodbye"
+    dialect "java"
+    when
+        $s: String (this != null, this.empty == false)
+    then
+        System.out.println("Goodbye World Rule Fired");
+        RuleResponse r = new RuleResponse();
+        r.setPayload( "Goodbye " + $s );
+        r.setRulesFired( r.getRulesFired()+1 );
+        r.setExecutionReference( reference );
+        insert( r );
+end

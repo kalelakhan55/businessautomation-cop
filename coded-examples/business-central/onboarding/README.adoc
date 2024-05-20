@@ -1,0 +1,6 @@
+:doctype: article
+:source-highlighter: coderay
+
+= Onboarding quick start demo
+
+

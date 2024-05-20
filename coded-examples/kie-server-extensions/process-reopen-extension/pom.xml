@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+			<groupId>org.redhat.services</groupId>
+			<artifactId>kie-extensions-examples-parent</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<!-- <relativePath>../../pom.xml</relativePath> -->
+	</parent>
+
+	<groupId>com.example</groupId>
+	<artifactId>process-reopen-extension</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>KIE Extension : ${project.artifactId}</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kie.server</groupId>
+			<artifactId>kie-server-services-common</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+		<dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-tx</artifactId>
+		  <version>${version.org.spring-tx}</version>
+		  <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kie.server</groupId>
+			<artifactId>kie-server-rest-common</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	  <dependency>
+        <groupId>org.kie.server</groupId>
+        <artifactId>kie-server-client</artifactId>
+        <scope>provided</scope>
+    </dependency>
+		<dependency>
+			<groupId>org.kie.server</groupId>
+			<artifactId>kie-server-services-jbpm</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-kie-services</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>

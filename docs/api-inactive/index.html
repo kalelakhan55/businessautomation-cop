@@ -1,0 +1,93 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="dist/swagger-ui.css" >
+    <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />
+    <style>
+      html
+      {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after
+      {
+        box-sizing: inherit;
+      }
+
+      body
+      {
+        margin:0;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+
+    <script src="dist/swagger-ui-bundle.js"> </script>
+    <script src="dist/swagger-ui-standalone-preset.js"> </script>
+    <script>
+    window.onload = function() {
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
+        // https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/
+           urls: [
+             {url: "spec/kie-swagger-7.12.1.json", name: "RHPAM KIE - 7.12.1 :: 7.59.0.Final-redhat-00009"},
+             {url: "spec/kie-swagger-7.12.0.json", name: "RHPAM KIE - 7.12.0 :: 7.59.0.Final-redhat-00006"},
+             {url: "spec/kie-swagger-7.11.1.json", name: "RHPAM KIE - 7.11.1 :: 7.52.0.Final-redhat-00008"},
+             {url: "spec/kie-swagger-7.10.0.json", name: "RHPAM KIE - 7.10.0 :: 7.48.0.Final-redhat-00004"},
+             {url: "spec/kie-swagger-7.9.1.json", name: "RHPAM KIE - 7.9.1 :: 7.44.0.Final-redhat-00006"},
+             {url: "spec/kie-swagger-7.9.json", name: "RHPAM KIE - 7.9 :: 7.44.0.Final-redhat-00003"},
+             {url: "spec/kie-swagger-7.8.json", name: "RHPAM KIE - 7.8 :: 7.39.0.Final-redhat-00005"},
+             {url: "spec/kie-swagger-7.7.1.json", name: "RHPAM KIE - 7.7.1 :: 7.33.0.Final-redhat-00003"},
+             {url: "spec/kie-swagger-7.7.json", name: "RHPAM KIE - 7.7 :: 7.33.0.Final-redhat-00002"},
+             {url: "spec/kie-swagger-7.6.json", name: "RHPAM KIE- 7.6 :: 7.30.0.Final-redhat-00003"},
+             {url: "spec/kie-swagger-7.5.1.json", name: "RHPAM KIE - 7.5.1 :: 7.26.0.Final-redhat-00006"},
+             {url: "spec/kie-swagger-7.5.json", name: "RHPAM KIE - 7.5 :: 7.26.0.Final-redhat-00005"},
+             {url: "spec/kie-swagger-7.4.1.json", name: "RHPAM KIE - 7.4.1 :: 7.23.0.Final-redhat-00003"},
+             {url: "spec/kie-swagger-7.4.0.json", name: "RHPAM KIE - 7.4 :: 7.23.0.Final-redhat-00002"},
+             {url: "spec/kie-swagger-7.3.1.json", name: "RHPAM KIE - 7.3.1 :: 7.18.0.Final-redhat-00004"},
+             {url: "spec/kie-swagger-7.1.1.json", name: "RHPAM KIE - 7.1.1 :: 7.11.0.Final-redhat-00004"},
+             {url: "spec/kie-swagger-7.0.json", name: "RHPAM KIE - 7.1 :: 7.7.0.Final-redhat-7"},
+             {url: "spec/bc-swagger-7.12.1.json", name: "RHPAM BC - 7.12.1 :: 7.59.0.Final-redhat-00009"},
+             {url: "spec/bc-swagger-7.12.0.json", name: "RHPAM BC - 7.12.0 :: 7.59.0.Final-redhat-00006"},
+             {url: "spec/bc-swagger-7.11.1.json", name: "RHPAM BC - 7.11.1 :: 7.52.0.Final-redhat-00008"},
+             {url: "spec/bc-swagger-7.10.0.json", name: "RHPAM BC - 7.10.0 :: 7.48.0.Final-redhat-00004"}, 
+             {url: "spec/bc-swagger-7.9.1.json", name: "RHPAM BC - 7.9.1 :: 7.44.0.Final-redhat-00006"},
+             {url: "spec/bc-swagger-7.9.json", name: "RHPAM BC - 7.9 :: 7.44.0.Final-redhat-00003"},
+             {url: "spec/bc-swagger-7.8.json", name: "RHPAM BC - 7.8 :: 7.39.0.Final-redhat-00005"},
+             {url: "spec/bc-swagger-7.7.1.json", name: "RHPAM BC - 7.7.1 :: 7.33.0.Final-redhat-00003"},
+             {url: "spec/bc-swagger-7.7.0.json", name: "RHPAM BC - 7.7 :: 7.33.0.Final-redhat-00002"},
+             {url: "spec/bc-swagger-7.6.json", name: "RHPAM BC - 7.6 :: 7.30.0.Final-redhat-00003"},
+             {url: "spec/bc-swagger-7.5.1.json", name: "RHPAM BC - 7.5.1 :: 7.26.0.Final-redhat-00006"},
+             {url: "spec/bc-swagger-7.5.json", name: "RHPAM BC - 7.5 :: 7.26.0.Final-redhat-00005"},
+             {url: "spec/bc-swagger-7.4.1.json", name: "RHPAM BC - 7.4.1 :: 7.23.0.Final-redhat-00003"},
+             {url: "spec/bc-swagger-7.4.0.json", name: "RHPAM BC - 7.4 :: 7.23.0.Final-redhat-00002"}
+           ],
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+      })
+      // End Swagger UI call region
+
+      window.ui = ui
+    }
+  </script>
+  </body>
+</html>

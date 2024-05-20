@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.pamenon.jbpm</groupId>
+  <artifactId>kafka-jbpm-process</artifactId>
+  <version>1.0.17-SNAPSHOT</version>
+  <packaging>kjar</packaging>
+  <name>WIH : kafka-jbpm-process</name>
+  <description>claim fund demo</description>
+
+  <properties>
+    <version.org.kie>7.39.0.Final-redhat-00005</version.org.kie>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.4.19</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-internal</artifactId>
+      <version>${version.org.kie}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-core</artifactId>
+      <version>${version.org.kie}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-persistence-jaxb</artifactId>
+      <version>${version.org.kie}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-api</artifactId>
+      <version>${version.org.kie}</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://repository.jboss.org/nexus/content/repositories/releases/org/jbpm/contrib/kafka-workitem/7.25.0.Final/ -->
+    <dependency>
+      <groupId>org.jbpm.contrib</groupId>
+      <artifactId>kafka-workitem</artifactId>
+      <version>7.25.0.Final</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>${version.org.kie}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
